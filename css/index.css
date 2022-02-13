@@ -3,14 +3,20 @@
 body,html{width:100%;}
 ul{}
 li{list-style: none;}
-a{text-decoration: none; text-decoration-color: blueviolet;}
+a{text-decoration: none; text-decoration-color: #3c9ea0}
 
 .section{margin:20px 0}
+.fix_menu{position: fixed; right:0; top:0; width:100px; display: none;}
+.fix_menu ul{max-width:70%;width: 100%; float:right}
+.fix_menu ul li{width:100%;}
+.fix_menu ul li a{display: block; border:3px solid transparent; color:#fff; background-color: #3c9ea0;}
+.fix_menu ul li a:hover,.fix_menu ul li a:focus{border-color:#3c9ea0}
+
 #section1{height:auto}
-#section1 .doc{display: inline-block; min-width:160px; padding: 10px; margin:0 10px; background-color:lightpink; font-weight: bold;color:#fff;text-align: center; border-radius: 5px;}
 
 .section,.slide{width:100%;}
 .section{height:500px}
+.section .btn{display: inline-block; min-width:160px; padding: 10px; margin:0 10px; background-color:lightpink; font-weight: bold;color:#fff;text-align: center; border-radius: 5px;}
 .mv,.slide,.slick-list,.slick-track{height:100%;}
 .mv{position:relative}
 
