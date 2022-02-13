@@ -29,8 +29,7 @@ a{text-decoration: none; text-decoration-color: #3c9ea0}
 .slide .item .link{height:100%; display: flex;justify-content:center; align-items: center; text-align:center}
 
 button[type=button]{display:inline-block; width:40px; height:40px;}
-
-
+#section2 .btn{margin-top:20px}
 .control{position:absolute; bottom:50px; left:50%; transform:translateX(-50%); }
 .control .control_inner .slick-dots{display: flex !important; justify-content:center}
 .control .control_inner .slick-dots li{margin:0 4px; }
