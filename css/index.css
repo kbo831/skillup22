@@ -3,7 +3,11 @@
 body,html{width:100%;}
 ul{}
 li{list-style: none;}
-a{text-decoration: none;}
+a{text-decoration: none; text-decoration-color: blueviolet;}
+
+.section{margin:20px 0}
+#section1{height:auto}
+#section1 .doc{display: inline-block; min-width:160px; padding: 10px; margin:0 10px; background-color:lightpink; font-weight: bold;color:#fff;text-align: center; border-radius: 5px;}
 
 .section,.slide{width:100%;}
 .section{height:500px}

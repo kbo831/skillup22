@@ -5,104 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="./css/index.css">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     
 </head>
 <body>
-<div class="section">
-    <a href="/doc/script.docx" class="doc" download="js에 대해서">js정리문서</a>
-</div>
-    
-<div class="section">
-    <h2>2주</h2>
-    <div class="mv">
+<div class="wrap">
 
-        <div class="slide">
-            <div class="item item1"><a href="" class="link"><span class="text">슬라이드1</span></a></div>
-            <div class="item item2"><a href="" class="link"><span class="text">슬라이드2</span></a></div>
-            <div class="item item3"><a href="" class="link"><span class="text">슬라이드3</span></a></div>
-            <div class="item item4"><a href="" class="link"><span class="text">슬라이드4</span></a></div>
-        </div>
-        <div class="control">
-            <div class="control_inner">
+    <h1>2022.skill_up</h1>
 
+    <div class="section" id="section1">
+        <h2>1주</h2>
+        <a href="/doc/script.docx" class="doc" download="script.docx">js정리문서</a>
+    </div>
+        
+    <div class="section" id="section2">
+        <h2>2주</h2>
+        <div class="mv">
 
+            <div class="slide">
+                <div class="item item1"><a href="" class="link"><span class="text">슬라이드1</span></a></div>
+                <div class="item item2"><a href="" class="link"><span class="text">슬라이드2</span></a></div>
+                <div class="item item3"><a href="" class="link"><span class="text">슬라이드3</span></a></div>
+                <div class="item item4"><a href="" class="link"><span class="text">슬라이드4</span></a></div>
             </div>
-            <div class="button">
-                <button class="pause" type="button"></button>
-                <button class="play" type="button"></button>
+            <div class="control">
+                <div class="control_inner">
 
+
+                </div>
+                <div class="button">
+                    <button class="pause" type="button"></button>
+                    <button class="play" type="button"></button>
+
+                </div>
             </div>
-        </div>
 
+        </div>
+    </div>
+
+    <div class="fix_menu">
+        <ul>
+            <li class="menu1"><a href="#section1">1주</a></li>
+            <li class="menu2"><a href="#section2">2주</a></li>
+            <li class="menu3"><a href="#section3">3주</a></li>
+            <li class="menu4"><a href="#section4">4주</a></li>
+            <li class="top"><a href="javascript:;">top</a></li>
+        </ul>
     </div>
 </div>
 
-<script>
-$(document).ready(function(){
-
-    //정지 & 재생 버튼 텍스트 넣기
-    $('.button .pause').text('puase');
-    $('.button .play').text('play');
-
-    //슬릭 슬라이드 셋팅값
-    $('.slide').slick({
-
-        slide:'.item',
-        autoplay : true,
-        autoplaySpeed : 3000,
-        arrows : true,
-        appendArrows : $('.control .button'),//넣고싶은 위치
-        dots:true,
-        appendDots : $('.control .control_inner'),//넣고 싶은 위치
-        slideToshow:1,
-        slideToScroll:1,
-        responsive:[
-
-        {
-            breakpoint: 1280,
-            settings:{
-
-                slideToshow:2
-                
-
-            }
-        }
-
-        ]
-        
-
-    });
-
-//정지 , 재생 버튼 기능의 순서
-    $('.button .play').hide();
-//복합 이벤트
-    $('.button .pause').on('click',function(){
-
-        $('.slide').slick('slickPause');
-        $('.button .play').show();
-
-    });
-
-    $('.button .play').on('click',function(){
-
-        $('.button .play').hide();
-        $('.slide').slick('slickPlay');
-        $('.button .pause').show();
-
-    });
-
-
-});
-
-
-</script>
-
-
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-				
+<script src="/js/doc.js"></script>	
 
 </body>
 </html>
