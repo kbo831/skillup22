@@ -15,10 +15,10 @@ a{text-decoration: none; text-decoration-color: #3c9ea0}
 #section1{height:auto}
 
 .section,.slide{width:100%;}
-.section{height:500px}
+.section{}
 .section .btn{display: inline-block; min-width:160px; padding: 10px; margin:0 10px; background-color:lightpink; font-weight: bold;color:#fff;text-align: center; border-radius: 5px;}
 .mv,.slide,.slick-list,.slick-track{height:100%;}
-.mv{position:relative}
+.mv{position:relative;height:500px}
 
 .slide .item{height: 100%; float:left; }
 .slide .item1{background:sandybrown}
