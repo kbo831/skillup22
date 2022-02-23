@@ -1,85 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/index.css">
+
     <script src="./js/jquery-1.11.2.min.js"></script>
-    
+    <link rel="stylesheet" type="text/css" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <script type="text/javascript" src="./js/slick.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/doc.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
 </head>
+
 <body>
-<div class="wrap">
-    <div class="intro"><h1>2022.skill_up</h1></div>
-  
-    <div class="nav fixed">
-        <div class="flower">
-           <a href="section1" class="bul" title="1주차 바로가기">1주</a>
-            <a href="section2" class="bul" title="2주차 바로가기">2주</a>
-            <a href="section3" class="bul" title="3주차 바로가기">3주</a>
-            <a href="section4" class="bul" title="4주차 바로가기">4주</a>
+    <div class="wrap">
+        <div class="intro">
+            <h1>2022.skill_up</h1>
         </div>
-    </div>
 
-    <div class="section flower" id="section1">
-        <h2 class="tit">1주 script 용어 정리</h2>
-        <a href="./doc/script.docx" class="doc btn" download="script.docx">js정리문서</a>
-    </div>
-        
-    <div class="section flower" id="section2">
-        <h2 class="tit">2주 slick_slide</h2>
-        <a href="./down/slide.zip" class="down btn" download="slide.zip">slick-slid문서</a>
-        <div class="mv">
-
-            <div class="slide">
-                <div class="item item1"><a href="" class="link"><span class="text">슬라이드1</span></a></div>
-                <div class="item item2"><a href="" class="link"><span class="text">슬라이드2</span></a></div>
-                <div class="item item3"><a href="" class="link"><span class="text">슬라이드3</span></a></div>
-                <div class="item item4"><a href="" class="link"><span class="text">슬라이드4</span></a></div>
+        <div class="nav fixed">
+            <div class="flower">
+                <a href="section1" class="bul" title="1주차 바로가기">1주</a>
+                <a href="section2" class="bul" title="2주차 바로가기">2주</a>
+                <a href="section3" class="bul" title="3주차 바로가기">3주</a>
+                <a href="section4" class="bul" title="4주차 바로가기">4주</a>
             </div>
-            <div class="control">
-                <div class="control_inner">
+        </div>
 
+        <div class="section flower" id="section1">
+            <h2 class="tit">1주 script 용어 정리</h2>
+            <a href="./doc/script.docx" class="doc btn" download="script.docx">js정리문서</a>
+        </div>
 
+        <div class="section flower" id="section2">
+            <h2 class="tit">2주 slick_slide</h2>
+            <a href="./down/slide.zip" class="down btn" download="slide.zip">slick-slid문서</a>
+            <div class="mv">
+
+                <div class="slide">
+                    <div class="item item1"><a href="" class="link"><span class="text">슬라이드1</span></a></div>
+                    <div class="item item2"><a href="" class="link"><span class="text">슬라이드2</span></a></div>
+                    <div class="item item3"><a href="" class="link"><span class="text">슬라이드3</span></a></div>
+                    <div class="item item4"><a href="" class="link"><span class="text">슬라이드4</span></a></div>
                 </div>
-                <div class="button">
-                    <button class="pause" type="button"></button>
-                    <button class="play" type="button"></button>
+                <div class="control">
+                    <div class="control_inner">
 
+
+                    </div>
+                    <div class="button">
+                        <button class="pause" type="button"></button>
+                        <button class="play" type="button"></button>
+
+                    </div>
                 </div>
+
             </div>
 
         </div>
-       
-    </div>
 
-    <div class="section flower" id="section3">
-        <h2 class="tit">3주 Swiper-slide</h2>
+        <div class="section flower" id="section3">
+            <h2 class="tit">3주 Swiper-slide</h2>
 
-        <div class="mv">
-            <div class="sw_slide">
+            <div class="mv">
+               
+                <div class="swiper-container">
+                  
+                    <div class="swiper-wrapper">
+                       
+                        <div class="swiper-slide item1">
+                            <span>스</span>
+                        </div>
+                        <div class="swiper-slide item2">
+                            <span>와</span>
+                        </div>
+                        <div class="swiper-slide item3">
+                            <span>이</span>
+                        </div>
+                        <div class="swiper-slide item4">
+                            <span>퍼</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>    
+                    <div class="swiper-button-prev"></div>
+                    <div class="control-btn">  
+                        <div class="swiper-button-play">play</div>
+                        <div class="swiper-button-pause">stop</div>
+                    </div>
+                  
+                    <div class="swiper-button-next"></div>
+                       
+                   
+                </div>
+              
+                <script>
+                    $(document).ready(function () {
+
+                        var swiper = new Swiper('.swiper-container', {
+
+                            direction: 'horizontal',
+                            //slidesPerView: 1,
+                            effect:'fade',
+                            spaceBetween: 0,
+                            debugger: true,
+                            mousewheel: true,
+                            loop: true,
+                            centerdeSlides: true,
+                            speed: 500,
+                            autoplay: {
+
+                                delay: 3000,
+                                //아래 기입을 해줘야 드래그 슬라이드 시 안 멈춤
+                                disableOnInteraction: false,
+
+                            },
+                            pagenation: {
+
+                                el: '.swiper-pagenaiton',
+                                clickable: true,
+                            },
+                            navigation: {
+
+                                prevEl: '.swiper-button-prev',
+                                nextEl: '.swiper-button-next',
+
+                            }
 
 
+
+                        });
+
+                       const play_btn = $('.swiper-button-play');
+                       const stop_btn = $('.swiper-button-pause');
+
+                       play_btn.hide();
+                       
+                       stop_btn.click(function(){
+
+                           play_btn.show();
+                           swiper.autoplay.stop();
+                           stop_btn.hide();
+                       });
+
+                       play_btn.click(function(){
+
+                            play_btn.hide();
+                            stop_btn.show();
+
+                           swiper.autoplay.start();
+                           
+                       });
+
+                       swiper.hover()
+
+                       
+                    });
+
+                </script>
             </div>
+        </div>
+
+        <div class="fix_menu">
+            <ul>
+                <li class="menu1"><a href="#section1">1주</a></li>
+                <li class="menu2"><a href="#section2">2주</a></li>
+                <li class="menu3"><a href="#section3">3주</a></li>
+                <li class="menu4"><a href="#section4">4주</a></li>
+                <li class="top"><a href="javascript:;">top</a></li>
+            </ul>
         </div>
     </div>
 
-    <div class="fix_menu">
-        <ul>
-            <li class="menu1"><a href="#section1">1주</a></li>
-            <li class="menu2"><a href="#section2">2주</a></li>
-            <li class="menu3"><a href="#section3">3주</a></li>
-            <li class="menu4"><a href="#section4">4주</a></li>
-            <li class="top"><a href="javascript:;">top</a></li>
-        </ul>
-    </div>
-</div>
 
 
-<link rel="stylesheet" type="text/css" href="./css/slick.css"/>
-<script type="text/javascript" src="./js/slick.min.js"></script>
-<script src="./js/doc.js"></script>	
 
 </body>
+
 </html>
