@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스킬업_fullpage</title>
+
+    <script src="../js/jquery-1.11.2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/slick.css" />
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/jquery.fullPage.css" />
+    <script type="text/javascript" src="../js/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../js/fullpage/jquery.fullPage.js"></script>
+    <script src="../js/doc.js"></script>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/slide/slide.css">
+   
+</head>
+<body>
+<div class="wrap">
+
+    <div class="gnb fixed">
+        <ul class="flower clear">
+            <li>
+                <a href="../index.html" class="bul" title="">home</a>
+            </li>
+
+            <li>
+                <a href="./slide.html" class="bul" title="">horizontal slick</a>
+            </li>
+
+            <li>
+                <a href="./v_slide.html" class="bul" title="">vertital slick</a>
+            </li>
+
+            <li>
+                <a href="./swiper.html" class="bul" title="">swiper slide</a>
+            </li>
+           
+        </ul>
+    </div>
+
+    <div class="section flower" id="swiper">
+        <div class="inner">
+            <h2 class="tit">Swiper-slide</h2>
+
+            <div class="mv">
+            
+                <div class="swiper-container">
+                
+                    <div class="swiper-wrapper">
+                    
+                        <div class="swiper-slide item1">
+                            <span>스</span>
+                        </div>
+                        <div class="swiper-slide item2">
+                            <span>와</span>
+                        </div>
+                        <div class="swiper-slide item3">
+                            <span>이</span>
+                        </div>
+                        <div class="swiper-slide item4">
+                            <span>퍼</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>    
+                    <div class="swiper-button-prev"></div>
+                    <div class="control-btn">  
+                        <div class="swiper-button-play">play</div>
+                        <div class="swiper-button-pause">stop</div>
+                    </div>
+                
+                    <div class="swiper-button-next"></div>
+                    
+                
+                </div>
+                
+
+                <script>
+                    $(document).ready(function () {
+
+                        var swiper = new Swiper('.swiper-container', {
+
+                            direction: 'horizontal',
+                            //slidesPerView: 1,
+                            effect:'fade',
+                            spaceBetween: 0,
+                            debugger: true,
+                            mousewheel: true,
+                            loop: true,
+                            centerdeSlides: true,
+                            speed: 500,
+                            autoplay: {
+
+                                delay: 3000,
+                                //아래 기입을 해줘야 드래그 슬라이드 시 안 멈춤
+                                disableOnInteraction: false,
+
+                            },
+                            pagenation: {
+
+                                el: '.swiper-pagenaiton',
+                                clickable: true,
+                            },
+                            navigation: {
+
+                                prevEl: '.swiper-button-prev',
+                                nextEl: '.swiper-button-next',
+
+                            }
+
+
+
+                        });
+
+                    const play_btn = $('.swiper-button-play');
+                    const stop_btn = $('.swiper-button-pause');
+
+                    play_btn.hide();
+                    
+                    stop_btn.click(function(){
+
+                        play_btn.show();
+                        swiper.autoplay.stop();
+                        stop_btn.hide();
+                    });
+
+                    play_btn.click(function(){
+
+                            play_btn.hide();
+                            stop_btn.show();
+
+                        swiper.autoplay.start();
+                        
+                    });
+
+                    
+                    });
+
+                </script>
+            </div>
+        </div>
+    </div>
+
+
+   
+</div>
+
+<link rel="stylesheet" type="text/css" href="./css/slick.css"/>
+<script type="text/javascript" src="./js/slick.min.js"></script>
+<script src="./js/doc.js"></script>	
+
+</body>
+</html>

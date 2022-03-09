@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스킬업_fullpage</title>
+
+    <script src="../js/jquery-1.11.2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/slick.css" />
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/jquery.fullPage.css" />
+    <script type="text/javascript" src="../js/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../js/fullpage/jquery.fullPage.js"></script>
+    <script src="../js/doc.js"></script>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/slide/slide.css">
+
+</head>
+
+<body>
+    <div class="wrap">
+
+        <div class="gnb fixed">
+            <ul class="flower clear">
+                <li>
+                    <a href="../index.html" class="bul" title="">home</a>
+                </li>
+
+                <li>
+                    <a href="./slide.html" class="bul" title="">horizontal slick</a>
+                </li>
+
+                <li>
+                    <a href="./v_slide.html" class="bul" title="">vertital slick</a>
+                </li>
+
+                <li>
+                    <a href="./swiper.html" class="bul" title="">swiper slide</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="section flower" id="slick-slide">
+            <div class="inner">
+                <h2 class="tit">slick_slide</h2>
+
+                <!-- vertical slide -->
+                <div class="mv" id="vertical">
+
+
+                    <div class="slide2">
+                        <div class="item item1"><a href="" class="link"><span class="text">수직 슬라이드1</span></a></div>
+                        <div class="item item2"><a href="" class="link"><span class="text">수직슬라이드2</span></a></div>
+                        <div class="item item3"><a href="" class="link"><span class="text">수직슬라이드3</span></a></div>
+                        <div class="item item4"><a href="" class="link"><span class="text">수직슬라이드4</span></a></div>
+                    </div>
+                    <div class="control2">
+                        <div class="control_inner">
+
+
+                        </div>
+                        <div class="button">
+                            <button class="pause" type="button"></button>
+                            <button class="play" type="button"></button>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+                <div id="description">
+
+                    <ul class="des_basic">
+
+                        <li>
+                            <em class="bullet title">slick-slide 기본</em>
+                            $(document).ready(function(){ <em class="point">$('.slide').slick();</em> })
+                        </li>
+
+                        <li>
+                            <em class="bullet title">slick-slide 옵션</em>
+                            $(document).ready(function(){
+
+                            <em class="block pl20 mt15">$('.slide').slick({
+
+                                <span class="block"> slide:'.item', [슬라이드 할 태그]</span>
+                                <span class="block"> autoplay : true, [자동 슬라이드]</span>
+                                <span class="block"> autoplaySpeed : 3000, [슬라이드 스피드 1초 1000]</span>
+                                <span class="block"> arrows : true, [슬라이드 이전 다음 화살표]</span>
+                                <span class="block">
+                                    appendArrows : $('.control .button'), [화살표 넣고싶은 위치]
+                                </span>
+                                <span class="block"> dots:true, [현재 슬라이드 위치 표시점]</span>
+                                <span class="block">
+                                    appendDots : $('.control .control_inner'), [dot 넣고 싶은 위치]
+                                </span>
+                                <span class="block"> slideToshow:1, [슬라이드 보여지는 개수]</span>
+                                <span class="block"> slideToScroll:1, [슬라이드 넘김 개수]</span>
+
+                                <span class="block mt15">
+
+                                    *반응형 옵션<br>
+                                    responsive:[<br>
+
+                                    {
+                                    <span class="block">
+                                        breakpoint: 1280, [1297부터 슬라이드 개수 2개보여주기]
+                                    </span>
+                                    <span class="block">settings:{<br>
+                                        slideToshow:2,<br>
+                                        slideToScroll:2<br><br>
+
+                                        }<br>
+
+                                    </span>
+
+
+
+                                    }
+
+                                    ]
+
+
+                                </span>
+                                });
+                            </em>
+
+                            })
+                        </li>
+
+                    </ul>
+
+
+                </div>
+
+                <script>
+
+                    $(document).ready(function () {
+
+                        $('#vertical .slide2').slick({
+
+                            slide: '.slide2 .item',
+                            autoplay: true,
+                            autoplaySpeed: 1000,
+                            vertical: true,
+                            fade: true,
+                            arrows: true,
+                            appendArrows: $('.control2 .button'),
+                            dots: true,
+                            appendDots: $('.control2 .control_inner'),
+                            slideToshow: 1,
+                            slideToScroll: 1,
+
+                        });
+
+                    })
+
+                </script>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <link rel="stylesheet" type="text/css" href="./css/slick.css" />
+    <script type="text/javascript" src="./js/slick.min.js"></script>
+    <script src="./js/doc.js"></script>
+
+</body>
+
+</html>

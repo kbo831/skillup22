@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+
+.intro{display: none; position:absolute;top:0;left:0;width: 100%;height: 100%;background-color: lightpink;z-index: 9999;text-align: center;align-items: center;justify-content: center;}
+.intro h1{
+    font-size: 100px;
+    color: #fff;
+    text-shadow: 2px 2px 2px #ec7998;
+}
+
+
+
+.section{margin:20px 0}
+.section .inner{padding: 0 15px}
+.section h2{margin-bottom: 10px;}
+
+#section1{height:auto}
+
+.section,.slide{width:100%;}
+.section .btn{display: inline-block;min-width:160px;padding: 10px;margin:0 10px;background-color: #f0df51;font-weight: bold;color:#fff;text-align: center;border-radius: 5px;margin: 10px;}
+.mv,.slide,.slick-list,.slick-track{height:100%;}
+.mv{position:relative;height:500px;margin-top: 10px;}
+
+.slide .item{height: 100%; float:left; }
+.slide .item1{background:sandybrown}
+.slide .item2{background: silver;}
+.slide .item3{background: darkgray;}
+.slide .item4{background: skyblue;}
+
+.slide .item .link{height:100%; display: flex;justify-content:center; align-items: center; text-align:center}
+
+button[type=button]{display:inline-block; width:40px; height:40px;}
+#slick-slide .btn{}
+.control{position:absolute; bottom:50px; left:50%; transform:translateX(-50%); }
+.control .control_inner .slick-dots{display: flex ; justify-content:center}
+.control .control_inner .slick-dots li{margin:0 4px; }
+.control .control_inner .slick-dots button[type=button]{width:10px; height:10px ;border-radius:50%; font-size:0; border-color:transparent; }
+
+.control .control_inner .slick-dots li.slick-active button[type=button]{background-color: blueviolet;}
+
+.control .button{margin-top:20px;display: flex;align-items: center;}
+.control .button button{display:inline-block; margin:0 4px; position:relative}
+.control .button button[aria-label="Previous"]{float:left;}
+.control .button button[aria-label="Next"]{float:right}
+.control .button button[aria-label="Previous"],.control .button button[aria-label="Next"]{word-break:break-all;font-size:12px}
+.control .button button.pause{}
+.control .button button.play{position:absolute;left: 48px;}
+
+/* vertical */
+
+#vertical{height:400px}
+#vertical .slide2{height:auto}
+#vertical .slide2 .item {float:none; height:400px}
+#vertical .slide2 .item1{border-color: #3c9ea0;}
+#vertical .slide2 .item2{border-color:cornflowerblue}
+#vertical .slide2 .item3{border-color:blueviolet}
+#vertical .slide2 .item4{border-color:#ec7998}
+
+.control2{position:absolute; bottom:50px; left:50%; transform:translateX(-50%); }
+.control2 .control_inner .slick-dots{display: flex ; justify-content:center}
+.control2 .control_inner .slick-dots li{margin:0 4px; }
+.control2 .control_inner .slick-dots button[type=button]{width:10px; height:10px ;border-radius:50%; font-size:0; border-color:transparent; }
+.control2 .control_inner .slick-dots li.slick-active button[type=button]{background-color: blueviolet;}
+.control2 .button{margin-top:20px;display: flex;align-items: center;}
+.control2 .button button{display:inline-block; margin:0 4px; position:relative}
+.control2 .button button[aria-label="Previous"]{float:left;}
+.control2 .button button[aria-label="Next"]{float:right}
+.control2 .button button[aria-label="Previous"],.control .button button[aria-label="Next"]{word-break:break-all;font-size:12px}
+.control2 .button button.pause{}
+.control2 .button button.play{position:absolute;left: 48px;}
+
+#vertical .slide2 .item .link{display:block;}
+
+
+.swiper-container,.swiper-wrapper,.swiper-slide{height: 100%;}
+.swiper-container{width: 100%; overflow: hidden; position: relative;}
+.swiper-slide{ background: #fff; border-width:10px; border-style: solid; display: flex; align-items: center; justify-content: center;}
+.swiper-slide span{font-size: 30px; font-weight: bold;}
+.swiper-slide.item1{ color:#ec7998; border-color:#ec7998}
+.swiper-slide.item2{ color:blueviolet;border-color:blueviolet}
+.swiper-slide.item3{ color:cornflowerblue;border-color:cornflowerblue}
+.swiper-slide.item4{ color:#3c9ea0; border-color: #3c9ea0;}
+
+:root{--swiper-navigation-size: 30px;}
+
+.control-btn{position: absolute; top:80%; left:50%; transform: translate(-50%,-50%); z-index: 10; }
+.swiper-button-prev, .swiper-button-next{display:block; height: 30px ; width: 15px ; left:auto ; right:auto }
+.swiper-button-prev{left:20px }
+.swiper-button-next{right:20px }
+.swiper-button-prev:after,.swiper-button-next:after{width:100% ; height: 100%; font-size: 30px }
+
+
