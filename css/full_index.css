@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+/* fullpage */
+
+.section{background-position:center center; background-repeat: no-repeat;}
+.section .inner{padding:15px}
+.section1{background-image: url('../img/1.jpg');}
+.section2{background-image: url('../img/2.jpg');}
+.section3{background-image: url('../img/3.jpg');}
+.section4{background-image: url('../img/4.jpg');}
+
+.section5{background-color: #eadbba;}
+.section5 .inner{min-height:300px}
+.section5 .inner .flower{margin-top:15px}
+.section5 .inner .flower li{display:inline-block}
