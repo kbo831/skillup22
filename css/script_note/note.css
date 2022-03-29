@@ -4,7 +4,7 @@
 .section:after{content:'';display:block;clear:both}
 .section .tab{width:200px;/* display: inline-block; *//* height: 100%; */float: left;}
 .section .tab_note{width: calc(100% - 250px);display: inline-block;float: left;}
-.note_button{border-bottom:2px solid transparent;background-color: transparent;}
+.note_button{border-bottom:2px solid transparent;background-color: transparent; outline: none;}
 .note_button:focus,.note_button:hover,.note_button:active{border-bottom: 2px solid #f0df51;}
 .note_box{}
 
