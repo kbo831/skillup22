@@ -1,9 +1,15 @@
 @charset "UTF-8";
+
+.section{}
+.section:after{content:'';display:block;clear:both}
+.section .tab{width:200px;/* display: inline-block; *//* height: 100%; */float: left;}
+.section .tab_note{width: calc(100% - 250px);display: inline-block;float: left;}
 .note_button{}
 .note_box{}
-.note_button.on + .note_box{}
 
-.note_box{display:table; table-layout:fixed; width:100%}
+
+.note_box{display:table;table-layout:fixed;width:100%;height:0;display: none;}
+.note_box.on{display:block;}
 .note_box > div{display:table-cell; padding:15px}
 .note_box .text-pre{white-space: pre;}
 .note_box.array .img_wrap{
@@ -11,3 +17,5 @@
     height: 994px;
 }
 
+
+.note_button.on ~ .note_box{height:auto}
