@@ -44,16 +44,16 @@
                     <strong class="block fullpage-section1 tit">script 강의노트</strong>
 
                     <ul class="tab">
-                        <li>
-                            <button type="button" class="note_button on">js정리문서</button>  
+                        <li class="on">
+                            <button type="button" class="note_button">js정리문서1</button>  
                         </li>
                         <li>
-                            <button type="button" class="note_button">js 배열[array]</button>
+                            <button type="button" class="note_button">js 배열[array]2</button>
                             
 
                         </li>
                         <li>
-                            <button type="button" class="note_button">js 배열[array]</button>
+                            <button type="button" class="note_button">js 배열[array]3</button>
                           
                         </li>
                     </ul>
@@ -157,8 +157,31 @@
                     <script>
 
                         $(document).ready(function(){
+                            //전역변수
 
+                            let tab = $('.tab li');
+                            let box =$('.tab_note .note_box');
+
+
+                            tab.click(function(){
+                                //지역변수 사용법이 잘 이해가 안 간다.
+                                //누른 탭의 순서에 맞게 내용을 불러오려면 지역변수를 사용해야하는가!!!???
+                                let idx = $(this).index();
+
+                                $(this).removeClass('on');
+                                box.eq(idx).removeClass('on');
+                               $(this).addClass('on').find('.note_button').focus();
+                               box.eq(idx).addClass('on');
+                              
+                               $(this).siblings().removeClass('on').find('.note_button').focusout();
+                               box.eq(idx).siblings().removeClass('on');
                             
+
+                            });
+
+
+
+                            console.log( )
 
 
                         });

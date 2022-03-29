@@ -13,7 +13,7 @@ li{list-style: none;}
 a{text-decoration: none; text-decoration-color: #3c9ea0; color:#333; font-size:15px}
 a:hover,a:focus,a:active{text-decoration: underline;}
 
-.wrap{padding: 90px 20px 0;width: 100%;position:relative}
+.wrap{padding: 63px 20px 0;width: 100%;position:relative}
 .clear{}
 /* 높이값 찾아주기; overflow:hidden or clearfix 처리 */
 .clear:after{content:''; display:block; clear:both;}
@@ -68,3 +68,6 @@ a:hover,a:focus,a:active{text-decoration: underline;}
 .fix_menu ul li{width:100%;}
 .fix_menu ul li a{display: block; border:3px solid transparent; color:#fff; background-color: #3c9ea0;}
 .fix_menu ul li a:hover,.fix_menu ul li a:focus{border-color:#3c9ea0}
+
+.tit{font-size:25px;padding-left: 40px;position:relative;}
+.tit:before{content:'';display:inline-block;width: 30px;height: 30px;background:url('/img/smile.png') no-repeat center;background-size:100%;top: 50%;margin-top: -15px;position: absolute;left: 0;}
