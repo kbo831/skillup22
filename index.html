@@ -41,27 +41,90 @@
 
             </ul>
         </div>
+
+     
         <!-- gnb -->
         <!-- section -->
         <div class="section flower" id="script">
             <div class="inner">
                 <div class="main-txt">
+                    <a href="#" class="item item1 active">1</a>
+                    <a href="#" class="item item2">2</a>
+                    <a href="#" class="item item3">3</a>
+                    <a href="#" class="item item4">4</a>
+                    <a href="#" class="item item5">5</a>
+                </div>
 
-                    <span class="item1">S</span>
-                    <span class="item2">K</span>
-                    <span class="item3">I</span>
-                    <span class="item4">L</span>
-                    <span class="item5">L</span>
-                    <span class="item6">&nbsp;</span>
-                    <span class="item7">U</span>
-                    <span class="item8">P</span>
-                    <span class="item9">&nbsp;</span>
-                    <span class="item10">22</span>
-                  
+                <div class="control">
+                    <button type="button" class="prev">이전</button>
+                    <button type="button" class="pause">정지</button>
+                    <button type="button" class="play">재생</button>
+                    <button type="button" class="next">다음</button>
+
                 </div>
             </div>
         </div>
+        <script>
+            $(document).ready(function(){
+            
+                let slide_width = parseInt($('.main-txt').width());
+                console.log(slide_width)
+                let item = $('.main-txt .item');
+                let item_length = item.length;
+                let item_width= (slide_width / item_length) / 4;
+                
+                console.log(item_length)
+                console.log(item_width)
+           
+                // let idx = item.length;
+                let prev_btn = $('.control .prev');
+                let next_btn = $('.control .next');
+                let stop_btn = $('.control .pause');
+                let play_btn = $('.control .play');
+    
 
+                // next 
+
+                function next_fc(){
+
+                    item.not(".animated").animate({
+                        //전체너비 나누기 슬라이드 개수 만큼
+                        "width":(slide_width / item_length)/4 },500,function(){                      
+
+                        });
+
+                }
+
+                next_fc();
+                // preve
+
+                function prev_fc(){
+
+
+                    
+                }
+
+                prev_btn.click(function(){
+
+
+
+                });
+
+
+                next_btn.click(function(){
+
+
+
+                });
+
+
+
+
+     
+
+            });
+
+        </script>
         <!-- section -->       
     </div>
   

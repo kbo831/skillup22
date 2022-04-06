@@ -56,6 +56,12 @@
                             <button type="button" class="note_button">js 배열[array]3</button>
                           
                         </li>
+
+                        <li>
+                            <button type="button" class="note_button">js 함수[function]</button>
+                          
+                        </li>
+
                     </ul>
                     <div class="tab_note">
                          <!-- 1  -->
@@ -65,93 +71,199 @@
                          <!-- 1 end-->
                         <!-- 2 array -->
                         <div class="note_box array">
-                            <!-- <div class="img_wrap">
-                                    <div>
-                                        <div class="img" ></div>
-                                    </div>
-                                </div> -->
+                            
                             <div class="left">
-                                <strong class="tit">배열 스크립트 연습 기록</strong>
+                                <strong class="tit">practice</strong>
                                 <p class="text-pre">
-                                    let ex = ["호준","is","해병대","군인","이다"]
-                                    console.log(ex);
-                                    
-                                    ex.pop();
-                                    console.log(ex);
-                                    
-                                    ex.push("red");
-                                    console.log(ex);
-                                    
-                                    ex.includes("호준");
-                                    console.log(ex.includes("호준"));
-                                    ex.includes("호준이 아저씨");
-                                    console.log(ex.includes("호준이 아저씨"));
-                                    
-                                    //let 안쓰고 변수명 인덱스로 가져와서 하면 됨
-                                    ex[1] ="느긋해"
-                                    ex[2] ="잠꾸러기"
-                                    ex[3] ="안전운전"
-                                    console.log(ex);
-                                    
-                                    
-                                    //slice 앞에서부터 인덱스미만까지 자름
-                                    ex.slice(0)
-                                    console.log(ex.slice(0));
-                                    //인덱스 1까지의 값을 제거하고 보고싶을 때
-                                    ex.slice(1)
-                                    console.log(ex.slice(1));
-                                    //인덱스 2까지의 값제거하고 보고싶을 때
-                                    ex.slice(2)
-                                    console.log(ex.slice(2));
-                                    //범위로 자를 때 인덱스 0포함부터 인덱스 2미만까지 자른 결과
-                                    //범위 안의 값을 가져올 때
-                                    ex.slice(0,2)
-                                    console.log(ex.slice(0,2));
-                                    //인덱스 1포함 2미만 자르기
-                                    ex.slice(1,2)
-                                    console.log(ex.slice(1,2));
-                                    //안전운전을 자르려면
-                                    ex.slice(3,4)
-                                    console.log(ex.slice(3,4));
-                                    //호준이 느긋해 만들려면
-                                    ex.slice(0,1);
-                                    ex.slice(1,2);
-                                    console.log(ex.slice(0,1),ex.slice(1,2));
-                                    //해병대 이후부터 자르기
-                                    ex.slice(0,3);
-                                    console.log(ex.slice(0,3))</p>
+let ex = ["호준","is","해병대","군인","이다"]
+console.log(ex);
+
+ex.pop();
+console.log(ex);
+
+ex.push("red");
+console.log(ex);
+
+ex.includes("호준");
+console.log(ex.includes("호준"));
+ex.includes("호준이 아저씨");
+console.log(ex.includes("호준이 아저씨"));
+
+//let 안쓰고 변수명 인덱스로 가져와서 하면 됨
+ex[1] ="느긋해"
+ex[2] ="잠꾸러기"
+ex[3] ="안전운전"
+console.log(ex);
+
+
+//slice 앞에서부터 인덱스미만까지 자름
+ex.slice(0)
+console.log(ex.slice(0));
+//인덱스 1까지의 값을 제거하고 보고싶을 때
+ex.slice(1)
+console.log(ex.slice(1));
+//인덱스 2까지의 값제거하고 보고싶을 때
+ex.slice(2)
+console.log(ex.slice(2));
+//범위로 자를 때 인덱스 0포함부터 인덱스 2미만까지 자른 결과
+//범위 안의 값을 가져올 때
+ex.slice(0,2)
+console.log(ex.slice(0,2));
+//인덱스 1포함 2미만 자르기
+ex.slice(1,2)
+console.log(ex.slice(1,2));
+//안전운전을 자르려면
+ex.slice(3,4)
+console.log(ex.slice(3,4));
+//호준이 느긋해 만들려면
+ex.slice(0,1);
+ex.slice(1,2);
+console.log(ex.slice(0,1),ex.slice(1,2));
+//해병대 이후부터 자르기
+ex.slice(0,3);
+console.log(ex.slice(0,3))</p>
                             </div>
                             <div class="right">
                                 <strong class="tit">console.log() 결과</strong>
                                 <p class="text-pre">
     
-                                    [ '호준', 'is', '해병대', '군인', '이다' ]
-                                    [ '호준', 'is', '해병대', '군인' ]
-                                    [ '호준', 'is', '해병대', '군인', 'red' ]
-                                    true
-                                    false
-                                    [ '호준', '느긋해', '잠꾸러기', '안전운전', 'red' ]
-                                    [ '호준', '느긋해', '잠꾸러기', '안전운전', 'red' ]
-                                    [ '느긋해', '잠꾸러기', '안전운전', 'red' ]
-                                    [ '잠꾸러기', '안전운전', 'red' ]
-                                    [ '호준', '느긋해' ]
-                                    [ '느긋해' ]
-                                    [ '안전운전' ]
-                                    [ '호준' ] [ '느긋해' ]
-                                    [ '호준', '느긋해', '잠꾸러기' ]
-    
+[ '호준', 'is', '해병대', '군인', '이다' ]
+[ '호준', 'is', '해병대', '군인' ]
+[ '호준', 'is', '해병대', '군인', 'red' ]
+true
+false
+[ '호준', '느긋해', '잠꾸러기', '안전운전', 'red' ]
+[ '호준', '느긋해', '잠꾸러기', '안전운전', 'red' ]
+[ '느긋해', '잠꾸러기', '안전운전', 'red' ]
+[ '잠꾸러기', '안전운전', 'red' ]
+[ '호준', '느긋해' ]
+[ '느긋해' ]
+[ '안전운전' ]
+[ '호준' ] [ '느긋해' ]
+[ '호준', '느긋해', '잠꾸러기' ]
+
                                 </p>
                                 
                             </div>
                             
                         </div>
                         <!-- 2 array end -->
-                           <!-- 3 -->
-                        <div class="note_box">
-                            <div class="">노트노트노트</div>
-                        </div>
-                        <!-- 3 end -->
+                        <!-- 3 array3 -->
+                        <div class="note_box array">
+                            <div class="left">
+                                <strong class="tit">practice</strong>
+                                <p class="text-pre">
 
+
+                                </p>
+                            </div>
+
+
+                            <div class="right">
+                                <strong class="tit">console.log()결과</strong>
+                                <p class="text-pre">
+
+                                </p>
+                            </div>
+
+                         </div>
+                        <!-- 3 array3 end-->
+
+                           <!-- 3 function -->
+                        <div class="note_box function">
+                            <div class="left">
+                                <strong class="tit">practice</strong>
+                                <p class="text-pre">
+1.함수 만들기
+
+**함수 안에 데이터 넣기
+function diet(){
+
+console.log("저녁")
+console.log("6시 이전에")
+console.log("밥 먹기")
+
+}
+
+                                </p>
+                            </div>
+
+
+                            <div class="right">
+                                <strong class="tit">console.log()결과</strong>
+                                <p class="text-pre">
+결과 값 없음
+                                </p>
+                            </div>
+
+                            <div class="left">
+                                <strong class="tit">practice</strong>
+                                <p class="text-pre">
+2.함수 호출하기
+
+function diet(){
+
+console.log("저녁")
+console.log("6시 이전에")
+console.log("밥 먹기")
+
+}
+
+** 함수 이름을 호출해야 결과값이 도출 됨.
+diet();
+                                </p>
+                            </div>
+
+
+                            <div class="right">
+                                <strong class="tit">console.log()결과</strong>
+                                <p class="text-pre">
+저녁
+6시 이전에
+밥 먹기
+                                </p>
+                            </div>
+
+
+                            <div class="left">
+                                <strong class="tit">practice</strong>
+                                <p class="text-pre">
+3.함수와 매개변수
+
+**매개 변수 넣기
+function diet(x,y,z){
+
+console.log("저녁")
+console.log("6시")
+console.log("밥 먹기")
+
+}
+
+** 바꾸고 싶은 내용 매개변수를 
+이용해 데이터 넣어주기
+
+diet("아침","7시" 이전에,"일어나기");
+
+                                </p>
+                            </div>
+
+
+                            <div class="right">
+                                <strong class="tit">console.log()결과</strong>
+                                <p class="text-pre">
+저녁
+6시 이전에
+밥 먹기
+아침 7시에 일어나기
+
+** 기존 diet 함수 내용 출력 후 
+변경된 매개변수 값을 
+넣어서 다시 출력
+                                </p>
+                            </div>
+
+                         </div>
+                        <!-- // 3 function end -->
                     </div>
 
                     <script>
@@ -181,7 +293,7 @@
 
 
 
-                            console.log( )
+                  
 
 
                         });
