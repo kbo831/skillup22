@@ -8,7 +8,7 @@
 .section .tab_note{
     padding: 20px 25px;
     border: 10px solid transparent;
-    border-image: url('/img/check_bg.jpg') 20 5 repeat;
+    border-image: url('./img/check_bg.jpg') 20 5 repeat;
 }
 .note_button{background-color: #ececec;border-radius:10px; outline: none; transition: 0.6s; padding:15px}
 .note_button:focus,.note_button:hover,.note_button:active{background-color: #f0df51;}
@@ -26,7 +26,7 @@
     height: 994px;
 }
 
-.note_box.function{display:flex}
-.note_box.function > div{max-width: 16.66666%; flex:0 0 16.666666%}
-.note_box.function .tit{font-size: 18px;}
-.note_box.function .text-pre{font-size: 18px;}
+.note_box.fc{}
+.note_box.fc > div{max-width: 16.66666%;}
+.note_box.fc .tit{font-size: 18px;}
+.note_box.fc .text-pre{font-size: 18px;}
