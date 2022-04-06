@@ -20,10 +20,13 @@
 .note_box button:focus{text-decoration: underline;}
 
 .note_box > div{display:table-cell; padding:15px}
-.note_box .text-pre{white-space: pre;}
+.note_box .text-pre{white-space: pre; word-wrap: break-word; word-break: keep-all;}
 .note_box.array .img_wrap{
     width: 1181px;
     height: 994px;
 }
 
-
+.note_box.function{display:flex}
+.note_box.function > div{max-width: 16.66666%; flex:0 0 16.666666%}
+.note_box.function .tit{font-size: 18px;}
+.note_box.function .text-pre{font-size: 18px;}
