@@ -424,7 +424,7 @@ diet("아침","7시" 이전에,"일어나기");
                                 var tag_list = tag_box.find(".hs_list");
                                 var tag_btn = tag_box.find(".hs_plus");
                                 // 10개만 보여야함
-                                    $(".hs_list .tag").slice(0, 10).css("display","inline-block");
+                                    $("#hash_tag .hs_list .tag").slice(0, 10).css("display","inline-block");
 
                                     tag_btn.click(function(){
 
@@ -435,7 +435,7 @@ diet("아침","7시" 이전에,"일어나기");
                                             $(this).find('button > span').text('해시태그 닫기');
                                             tag_list.addClass('on');
                                                 // 전부 보여야함
-                                            $(".hs_list .tag:hidden").css("display","inline-block");
+                                            $("#hash_tag .hs_list .tag:hidden").css("display","inline-block");
 
                                         }else if($(this).hasClass('active') !== true){
 
@@ -444,7 +444,7 @@ diet("아침","7시" 이전에,"일어나기");
                                             tag_list.removeClass('on');
                                               //10개만 보이기
 
-                                            $(".hs_list .tag").css("display","none").slice(0, 10).css("display","inline-block");
+                                            $("#hash_tag .hs_list .tag").css("display","none").slice(0, 10).css("display","inline-block");
                                           
                                         }
 
