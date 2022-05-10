@@ -309,7 +309,281 @@ diet("아침","7시" 이전에,"일어나기");
             </div>
             <div class="section section2">
                 <div class="inner">
-                    <strong class="block fullpage-section2">fullpage-section2</strong>
+                    <strong class="block fullpage-section2">  해시태그   </strong>
+
+                      <p class="title">display: none & inline-block</p>
+                        <div>
+                            <style>
+
+                            .sh_tag{background-color:#5e7fb5;padding:45px 15px 30px;}
+
+                            .tag_box,.hs_list{width:100%;}
+                            .hs_list,.hs_list .tag{display:inline-block}
+
+                            .tag_box{max-width:1240px;text-align: left; margin: 0 auto;position:relative; }
+                            .hs_list{max-width:1122px;min-height:38px;overflow: hidden;  }
+                            .hs_list .tag{margin-right:12px;margin-bottom: 15px; float:left;display:none; }
+                            .hs_list .tag:last-child{margin-right: 0;}
+                            .hs_list .tag .link{display:block;min-width:64px; min-height:37px; font-size: 16px; color:#fff; padding: 9px 10px 10px; box-sizing: border-box; border:1px solid rgba(255,255,255,0.3); border-radius: 7px;line-height: 1;}
+
+                            .hs_list.on{height:auto; overflow: visible;}
+                            .hs_list .tag .link:hover,.hs_list .tag .link:focus,.hs_list .tag .link:active{ color:#07347d; background-color: #fff; border-color:#fff}
+
+                            .hs_plus{position:absolute;top:3px;right: 0;width:32px;height:32px; background-color:transparent; border-width:1px 0 0 1px; }
+                            .hs_plus button{display:flex; width:100%; height:100%; align-items: center; justify-content: center;background-color:transparent; }
+                            .hs_plus button:focus{border:2px solid #fff}
+                            .hs_plus button span{font-size: 0; position:relative; width: 20px;height: 20px; display:block}
+                            .hs_plus button span:before,.hs_plus button span:after{content:''; display:block; position:absolute; top:50%; left:50%; }
+                            .hs_plus button span:before{width:14px;height:0px; transform:translate(-50%,0); border-width:1px 0 0 0 }
+                            .hs_plus button span:after{width:0px;height:14px;transform:translate(0,-50%); border-width:0 1px 0 0}
+
+                            .hs_plus,.hs_plus button span:before,.hs_plus button span:after{border-style: solid; border-color:#fff;}
+
+                            .hs_plus.active{ background-color:#043e9d;border:0}
+                            .hs_plus.active button span:before,.hs_plus.active button span:after{content:''; display:block; position:absolute;border-style: solid; border-color:#fff;top:50%; left:50%; }
+                            .hs_plus.active button span:before{width: 100%;height:0px; transform:translate(-50%,0) rotate(45deg); border-width:1px 0 0 0 }
+                            .hs_plus.active button span:after{width:0px;height: 100%;transform:translate(0,-50%) rotate(45deg); border-width:0 1px 0 0}
+
+
+
+                            #hash_tag2  .hs_list .tag{opacity: 0; visibility: hidden;}
+
+
+                            </style>
+                            <div id="hash_tag" class="sh_tag" >
+                                <!-- 기본2줄  -->
+                                <div class="tag_box">
+                
+                                    <div class="hs_list">
+                                        <div class="tag">
+                                            <a href="" class="link">#전체</a>
+                                        </div>
+                                        <div class="tag">
+                                            <a href="" class="link">#채용정보</a>
+                                        </div>
+                                        <div class="tag">
+                                            <a href="" class="link">#지역거점</a>
+                                        </div>
+                                        <div class="tag">
+                                            <a href="" class="link">#교육자료</a>
+                                        </div>
+                                        <div class="tag">
+                                            <a href="" class="link">#보도자료</a>
+                                        </div>
+                    
+                                        <div class="tag">
+                                            <a href="" class="link">#교육</a>
+                                        </div>
+                                        <div class="tag">
+                                            <a href="" class="link">#학술논문</a>
+                                        </div>
+                                        <div class="tag">
+                                            <a href="" class="link">#연구보고서</a>
+                                        </div>
+                                        <div class="tag">
+                                            <a href="" class="link">#학술지</a>
+                                        </div>
+                                        <div class="tag">
+                                            <a href="" class="link">#해양캠프</a>
+                                        </div>
+                    
+                                        <div class="tag">
+                                            <a href="" class="link">#공공데이터</a>
+                                        </div>
+                                        <!-- 1줄 -->
+                                        <div class="tag">
+                                            <a href="" class="link">#연구</a>
+                                        </div>
+                                        <div class="tag">
+                                            <a href="" class="link">#채용정보</a>
+                                        </div>
+                                        <div class="tag">
+                                            <a href="" class="link">#지역거점</a>
+                                        </div>
+                                        <div class="tag">
+                                            <a href="" class="link">#교육자료</a>
+                                        </div>
+                    
+                                        
+                                        <!-- // end -->
+                                    </div>
+                
+                                    <div class="hs_plus">
+                                        <button type="button"><span>해시태그 더보기</span></button>
+                                    </div>
+                
+                                </div>
+                            
+                                
+                            </div>
+                            <script>
+
+                                $(document).ready(function(){
+
+                                var tag_box = $('#hash_tag');
+                                var tag_list = tag_box.find(".hs_list");
+                                var tag_btn = tag_box.find(".hs_plus");
+                                // 10개만 보여야함
+                                    $(".hs_list .tag").slice(0, 10).css("display","inline-block");
+
+                                    tag_btn.click(function(){
+
+                                        $(this).toggleClass('active');
+
+                                        if( $(this).hasClass('active') == true){
+
+                                            $(this).find('button > span').text('해시태그 닫기');
+                                            tag_list.addClass('on');
+                                                // 전부 보여야함
+                                            $(".hs_list .tag:hidden").css("display","inline-block");
+
+                                        }else if($(this).hasClass('active') !== true){
+
+                                            $(this).find('button > span').text('해시태그 더보기');
+
+                                            tag_list.removeClass('on');
+                                              //10개만 보이기
+
+                                            $(".hs_list .tag").css("display","none").slice(0, 10).css("display","inline-block");
+                                          
+                                        }
+
+                                    });
+
+                                })
+                            </script>
+
+              
+                        </div>
+                         <!-- //end -->
+
+                        <!-- hash_tag2 -->
+                        <p class="title"> opacity  & visibility </p>
+                        <div>
+                            <style>
+
+                            #hash_tag2  .hs_list .tag{opacity: 0; visibility: hidden; display:inline-block;transition:0.3s}
+
+                            </style>
+                            <div id="hash_tag2" class="sh_tag" >
+                                <!-- 기본2줄  -->
+                                <div class="tag_box">
+                
+                                    <div class="hs_list">
+                                        <div class="tag">
+                                            <a href="" class="link">#전체</a>
+                                        </div>
+                                        <div class="tag">
+                                            <a href="" class="link">#채용정보</a>
+                                        </div>
+                                        <div class="tag">
+                                            <a href="" class="link">#지역거점</a>
+                                        </div>
+                                        <div class="tag">
+                                            <a href="" class="link">#교육자료</a>
+                                        </div>
+                                        <div class="tag">
+                                            <a href="" class="link">#보도자료</a>
+                                        </div>
+                    
+                                        <div class="tag">
+                                            <a href="" class="link">#교육</a>
+                                        </div>
+                                        <div class="tag">
+                                            <a href="" class="link">#학술논문</a>
+                                        </div>
+                                        <div class="tag">
+                                            <a href="" class="link">#연구보고서</a>
+                                        </div>
+                                        <div class="tag">
+                                            <a href="" class="link">#학술지</a>
+                                        </div>
+                                        <div class="tag">
+                                            <a href="" class="link">#해양캠프</a>
+                                        </div>
+                    
+                                        <div class="tag">
+                                            <a href="" class="link">#공공데이터</a>
+                                        </div>
+                                        <!-- 1줄 -->
+                                        <div class="tag">
+                                            <a href="" class="link">#연구</a>
+                                        </div>
+                                        <div class="tag">
+                                            <a href="" class="link">#채용정보</a>
+                                        </div>
+                                        <div class="tag">
+                                            <a href="" class="link">#지역거점</a>
+                                        </div>
+                                        <div class="tag">
+                                            <a href="" class="link">#교육자료</a>
+                                        </div>
+                    
+                                        
+                                        <!-- // end -->
+                                    </div>
+                
+                                    <div class="hs_plus">
+                                        <button type="button"><span>해시태그 더보기</span></button>
+                                    </div>
+                
+                                </div>
+                            
+                                
+                            </div>
+                            <script>
+
+                                $(document).ready(function(){
+                                
+                                
+                                    var tag_box2 = $('#hash_tag2');
+                                    var tag_list2 = tag_box2.find(".hs_list");
+                                    var tag_num = $("#hash_tag2 .hs_list .tag").length;
+                                    var tag_btn2 = tag_box2.find(".hs_plus");
+                                
+                                
+                                //10개만 보이기
+                                    
+                                $("#hash_tag2 .hs_list .tag").slice(0,10).css({"opacity":"1","visibility":"visible"})
+                              
+                                    tag_btn2.click(function(){
+                                
+                                        $(this).toggleClass('active');
+                                
+                                        if(	$(this).hasClass('active') == true){
+                                
+                                            $(this).find('button > span').text('해시태그 닫기');
+                                            tag_list2.addClass('on');
+                                            $("#hash_tag2 .hs_list .tag").slice(0,tag_num).css({"opacity":"1","visibility":"visible"})
+                                       
+
+                                            tag_box2.find('button').trigger("focus");
+                                            
+                                        }else if($(this).hasClass('active') !== true){
+                                
+                                            $(this).find('button > span').text('해시태그 더보기');
+                                            tag_list2.removeClass('on');
+                                            $("#hash_tag2 .hs_list .tag").css({"opacity":"0","visibility":"hidden"}).slice(0,10).css({"opacity":"1","visibility":"visible"})
+                                        ;
+                                   
+                                        }else{
+
+                                            return false
+
+                                        }
+                                
+                                    });
+                                
+                                    
+                                    })
+                                
+                                
+                                    </script>
+
+              
+                        </div>
+                        <!--// end -->
+               
                 </div>
             </div>
             <div class="section section3">
