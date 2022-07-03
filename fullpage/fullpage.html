@@ -15,6 +15,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="../js/fullpage/jquery.fullPage.js"></script>
     <script src="../js/doc.js"></script>
+    <script src="../js/common.js"></script>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/full_index.css">
 </head>
@@ -22,24 +23,57 @@
 <body>
     <div class="wrap">
 
-        <div class="gnb fixed">
-            <ul class="flower clear">
-           
-                <li>
-                    <a href="../slide/slide.html" class="bul" title="">slide</a>
-                </li>
-                <li>
-                    <a href="../fullpage/fullpage.html" class="bul" title="">fullpage</a>
-                </li>
-                <li>
-                    <a href="../script_note/note.html" class="bul" title="스크립트 강의 정리노트">script_note</a>
-                </li>
-                <li>
-                    <a href="../index.html" class="bul" title="">home</a>
-                </li>
-               
-            </ul>
-        </div>
+        <header class="header clearfix">
+
+            <div class="gnb_wrap">
+             <div class="gnb_in">
+               <!-- gnb -->
+               <a href="#" class="link logo">
+                kim's
+               </a>
+               <nav class="gnb">
+                 <ul class="drop_down clearfix">
+                     <li class="li depth1">
+                       <a href="../slide/slide.html" class="link zamong">slick</a>
+                       <ul class="depth2">
+                        <li><a href="../slide.html" class="link">horizontal slick</a></li>
+                        <li><a href="../v_slide.html" class="link">vertital slick</a></li>
+                        <li><a href="../swiper.html" class="link">swiper slide</a></li>
+                      </ul>
+                     </li>
+                     <li class="li depth1 ">
+                       <a href="../fullpage/fullpage.html" class="link mint">Fullpage</a>
+                       <ul class="depth2">
+                         <li><a href="#" class="link">2차메뉴</a></li>
+                         <li><a href="#" class="link">2차메뉴</a></li>
+                         <li><a href="#" class="link">2차메뉴</a></li>
+                       </ul>
+                     </li>
+                     <li class="li depth1">
+                       <a href="../script_note/note.html" class="link vanila">script_note</a>
+                       <ul class="depth2">
+                         <li><a href="#" class="link"></a></li>
+                         <li><a href="#" class="link">2차메뉴</a></li>
+                         <li><a href="#" class="link">2차메뉴</a></li>
+                       </ul>
+                     </li>
+                     <li class="li depth1">
+                       <a href="#" class="link org">Prontend mento</a>
+                       <ul class="depth2">
+                         <li><a href="#" class="link">2차메뉴</a></li>
+                         <li><a href="#" class="link">2차메뉴</a></li>
+                         <li><a href="#" class="link">2차메뉴</a></li>
+                       </ul>
+                     </li>
+                 </ul>
+               </nav>
+         
+             </div>
+             <!-- gnb -->
+           </div>
+         
+         </header>
+
 
         <div class="wrap" id="fullpage">
 
