@@ -148,7 +148,37 @@
 
       </div>
 
+     <script>
 
+        $(document).ready(function(){
+
+          var todo = $("#todo");
+          var change_button = todo.find(".day");
+
+        change_button.click(function(){
+
+          if(change_button.hasClass('day') == true){
+
+          $(this).removeClass("day").addClass("night")
+          $(this).find(".sr-only").text("낮 스킨 변경 버튼")
+          todo.css("background-image","url('/img/do-it/bg-desktop-dark.jpg')")
+
+          }else{
+
+            $(this).removeClass("night").addClass("day")
+            $(this).find(".sr-only").text("밤 스킨 변경 버튼")
+            todo.css("background-image","url('/img/do-it/bg-desktop-light.jpg')")
+          }
+
+        })
+
+
+
+
+        })
+
+      </script>
+        
     </div>
 
 
