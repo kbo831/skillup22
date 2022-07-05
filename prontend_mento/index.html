@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스킬업_fullpage</title>
+
+    <script src="../js/jquery-1.11.2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/slick.css" />
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/jquery.fullPage.css" />
+    <script type="text/javascript" src="../js/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../js/fullpage/jquery.fullPage.js"></script>
+    <script src="../js/doc.js"></script>
+    <script src="../js/common.js"></script>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/prontend_mento/pront_mento.css">
+</head>
+
+<body>
+    <div class="wrap">
+
+        <header class="header clearfix">
+
+            <div class="gnb_wrap">
+             <div class="gnb_in">
+               <!-- gnb -->
+               <a href="#" class="link logo">
+                kim's
+               </a>
+               <nav class="gnb">
+                 <ul class="drop_down clearfix">
+                     <li class="li depth1">
+                       <a href="../slide/slide.html" class="link zamong">slick</a>
+                       <ul class="depth2">
+                        <li><a href="../slide.html" class="link">horizontal slick</a></li>
+                        <li><a href="../v_slide.html" class="link">vertital slick</a></li>
+                        <li><a href="../swiper.html" class="link">swiper slide</a></li>
+                      </ul>
+                     </li>
+                     <li class="li depth1 ">
+                       <a href="../fullpage/fullpage.html" class="link mint">Fullpage</a>
+                       <ul class="depth2">
+                         <li><a href="#" class="link">2차메뉴</a></li>
+                         <li><a href="#" class="link">2차메뉴</a></li>
+                         <li><a href="#" class="link">2차메뉴</a></li>
+                       </ul>
+                     </li>
+                     <li class="li depth1">
+                       <a href="../script_note/note.html" class="link vanila">script_note</a>
+                       <ul class="depth2">
+                         <li><a href="#" class="link"></a></li>
+                         <li><a href="#" class="link">2차메뉴</a></li>
+                         <li><a href="#" class="link">2차메뉴</a></li>
+                       </ul>
+                     </li>
+                     <li class="li depth1">
+                       <a href="../prontend_mento/prontend_mento.html" class="link org">Prontend mento</a>
+                       <ul class="depth2">
+                         <li><a href="#" class="link">2차메뉴</a></li>
+                         <li><a href="#" class="link">2차메뉴</a></li>
+                         <li><a href="#" class="link">2차메뉴</a></li>
+                       </ul>
+                     </li>
+                 </ul>
+               </nav>
+         
+             </div>
+             <!-- gnb -->
+           </div>    
+         
+         </header>
+
+         
+         <div class="section week1">
+          <h2 class="h2">22.07.03 움직이는 header &  웹접근성 메뉴 구현</h2>
+          <ul class="do_it">
+              <li><input type="checkbox" name="checkbox" class="check" id="check1">
+                  <label for="check1"><em>1</em>웹접근성 탭메뉴</label>
+              </li>
+              <li><input type="checkbox" name="checkbox" class="check" id="check2">
+                  <label for="check2"><em>2</em>움직이는 header & ov 시 배경색 변경</label>
+              </li>
+              <li><input type="checkbox" name="checkbox" class="check" id="check3">
+                  <label for="check3"><em>3</em>섹션별 높이값에 따른 색깔변화</label>
+              </li>
+  
+          </ul>
+          <div class="result">1,2번 현재 페이지에 적용 중</div>
+  
+      </div>
+  
+      <div class="section week2">
+          <h2 class="h2">22.07.04 ~ 16</h2>
+          <ul class="do_it">
+              <li>
+                  <input type="checkbox" name="checkbox" class="check" id="check1">
+                  <label for="check1"><em>1</em><a href="https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW" target="_blank" title="새창열림">공통 과제:  두잇 리스트 구현하기</a></label>
+              </li>
+              <li>
+                  <input type="checkbox" name="checkbox" class="check" id="check2">
+                  <label for="check2"><em>2</em>슬릭슬라이드 커스텀</label>
+              </li>
+             
+  
+          </ul>
+          <div class="result"></div>
+  
+      </div>
+
+
+      <div class="section" id="todo">
+
+        <div class="section-in">
+
+            <strong class="title">TO DO</strong>
+            <button type="button" class="day"><span class="sr-only">낮과 밤 스킨 변경 버튼</span></button>
+
+            <div class="do-enter">
+              <input type="text" class="text" value="input do it list">
+              <button type="submit" class="input-btn">입력</button>
+            </div>
+
+            <ul class="do-content">
+              <li>
+                <input type="checkbox" id="check1" class="check" name="check">
+                <label for="check1">
+                  <span>do it list</span>
+                </label>
+                <button type="button" class="delet">
+                  <span class="sr-only">삭제버튼</span>
+                </button>
+              </li>
+            </ul>
+
+            <div class="total"></div>
+            <div class="control">
+                <button type="button" class="all">All</button>
+                <button type="button" class="active">active</button>
+                <button type="button" class="completed">completed</button>
+                <button type="button" class="Clear">Clear completed</button>
+            </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>
